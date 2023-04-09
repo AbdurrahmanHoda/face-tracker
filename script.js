@@ -11,17 +11,17 @@ stopMyVideo();
 function startMyVideo() {
     // Setup element show hide states
     hideElement("startVideo");
-     showElement("stopVideo");
-     showElement("debug");
+    showElement("stopVideo");
+    showElement("debug");
     // Call helper library to start webcam
     startVideo();
 }
 
 function stopMyVideo() {
     // Setup element show hide states
-     showElement("startVideo");
+    showElement("startVideo");
     hideElement("stopVideo");
-     hideElement("debug");
+    hideElement("debug");
     // Call helper library to stop webcam
     stopVideo();
     mockMode = false;
@@ -65,7 +65,6 @@ function drawMyFace(){
     if(positions.length>0){
       drawMyFaceLine(positions);
       drawMyFaceDots(positions);
-
     }
 
     if(isVideoStarted() || mockMode){
@@ -82,7 +81,7 @@ function setMyFaceScore(){
  * Draws the face dots
  * @param positions - array of face positions
  */
-function drawMyFaceDots(positions){
+function drawMyFaceDots(positions) {
   // loop through all dots to draw the face
   for(let i=0;i<positions.length;i++){
     const posX = positions[i][0];
@@ -92,7 +91,6 @@ function drawMyFaceDots(positions){
         // write the dot label on the screen with drawText
         drawText(i,posX,posY);
     }
-  3
 }
 
 /**
